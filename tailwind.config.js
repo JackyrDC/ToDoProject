@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+ import { colors as color }  from 'tailwindcss/colors';
+
 export default {
   content: [
     "./index.html",
@@ -6,6 +8,8 @@ export default {
   ],
   theme: {
     colors: {
+      blue: color.blue,
+      gray: color.gray,
       
     },
     extend: {
