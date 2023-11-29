@@ -1,6 +1,9 @@
 import { Login } from "./components"
-function App() {
+
+const App = () => {
+  return (
   <Login/>
+  )
 }
 
 export default App
