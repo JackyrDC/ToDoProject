@@ -1,7 +1,7 @@
 export const Login = () => {
 
     return (
-        <div className="">
+        <div className="my-4 mx-6 ">
             <h2>Login</h2>
 
             <form>
