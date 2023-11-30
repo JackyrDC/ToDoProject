@@ -2,7 +2,9 @@ import { Login } from "./components"
 
 const App = () => {
   return (
-  <Login/>
+    <div className = "container col-span-2 w-1/3 h-1/3 place-items-center">
+        <Login/>
+    </div>
   )
 }
 

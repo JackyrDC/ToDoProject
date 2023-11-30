@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-import { colors as color } from 'tailwindcss/colors';
+ {import('tailwindcss').Config} 
+ import colors from 'tailwindcss/colors'
 
 export default {
     content: [
@@ -8,7 +8,8 @@ export default {
     ],
     theme: {
         colors: {
-
+            'sky': colors.sky,
+            'slate': colors.slate,
         },
         extend: {
 
