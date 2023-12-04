@@ -1,10 +1,14 @@
-import { Login } from "./components"
+//import { Login } from "./components"
+import UserPage from "./layouts/MainPage"
+
 
 const App = () => {
+
   return (
-    <div className = "container col-span-2 w-1/3 h-1/3 place-items-center">
-        <Login/>
+    <div className="my-6 ">
+       <UserPage/>
     </div>
+         
   )
 }
 
