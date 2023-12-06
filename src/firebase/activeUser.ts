@@ -1,15 +1,19 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, User as FirebaseUser } from "firebase/auth";
 
 const auth = getAuth();
-const getCurrentUser = () => {
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    const uid : string = user.uid;
-    const uname : string|null = user.displayName;
-    const currentUser = { uid, uname};
-    return(currentUser);
-    } 
-});
-}
+
+const getCurrentUser = (): Promise<FirebaseUser | null> => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      unsubscribe(); // Detenemos la escucha una vez que se obtiene el estado
+
+      if (user) {
+        resolve(user);
+      } else {
+        resolve(null);
+      }
+    }, reject);
+  });
+};
 
 export default getCurrentUser;
